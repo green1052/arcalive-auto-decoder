@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name arcalive-auto-decoder
 // @version 1.0.0
-// @author ㅇㅇ(69.74)
+// @author green1052
 // @description 아카라이브 base64 내용을 자동으로 디코딩합니다.
 // @match http*://arca.live/b/*/*
 // @namespace arcalive-auto-decoder
