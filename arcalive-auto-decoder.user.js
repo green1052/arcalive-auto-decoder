@@ -8,7 +8,6 @@
 // @rut-at document-start
 // @noframes
 // @license GPLv3
-// @homepageURL	https://github.com/green1052/arcalive-auto-decoder
 // @downloadURL https://raw.githubusercontent.com/green1052/arcalive-auto-decoder/main/arcalive-auto-decoder.user.js
 // @homepageURL https://github.com/green1052/arcalive-auto-decoder
 // @require https://unpkg.com/url-regex-safe
