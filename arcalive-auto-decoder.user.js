@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name arcalive-auto-decoder
-// @version 1.0.0
+// @version 1.0.1
 // @author green1052
 // @description 아카라이브 base64 내용을 자동으로 디코딩합니다.
-// @match http*://arca.live/b/*/*
+// @match https://arca.live/b/*/*
 // @namespace arcalive-auto-decoder
-// @rut-at document-start
+// @rut-at document-end
 // @noframes
 // @license GPLv3
 // @downloadURL https://raw.githubusercontent.com/green1052/arcalive-auto-decoder/main/arcalive-auto-decoder.user.js
@@ -13,7 +13,7 @@
 // @require https://unpkg.com/url-regex-safe
 // ==/UserScript==
 
-window.addEventListener("DOMContentLoaded", () => {
+(() => {
     "use strict";
 
     const content = document.querySelector("div.article-content");
@@ -29,4 +29,4 @@ window.addEventListener("DOMContentLoaded", () => {
         } catch {
         }
     }
-});
+})();
