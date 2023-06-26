@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name arcalive-auto-decoder
-// @version 2.0.0
+// @version 2.1.0
 // @author green1052
 // @description 아카라이브 base64 내용을 자동으로 디코딩합니다.
 // @match https://arca.live/b/*/*
@@ -21,7 +21,7 @@
         while (regex.test(content.innerHTML)) {
             let decoded = regex.exec(content.innerHTML)[0];
 
-            while (decoded.match(/aHR0c[0-9A-Za-z]{8,}[=]{0,2}/) == null) {
+            while (decoded.match(/aHR0c[A-Za-z0-9+/]{20,}={0,2}/) == null) {
                 decoded = atob(decoded);
             }
 
@@ -32,8 +32,8 @@
 
     if (content === null) return;
 
-    decode(/aHR0c[0-9A-Za-z]{20,}[=]{0,2}/); //aHR0c:1회인코딩된것.
-    decode(/YUhSMGN[0-9A-Za-z]{80,}[=]{0,2}/); //YUhSMGN:2회인코딩된것.
-    decode(/[0-9A-Za-z]{30,}[=]{1,2}/); //문자열 30회 + '=' 1~2회
-    decode(/[0-9A-Za-z]{200,}[=]{0,2}/); //문자열 200회 + '=' 0~2회
+    decode(/aHR0c[A-Za-z0-9+/]{20,}={0,2}/); //aHR0c:1회인코딩된것.
+    decode(/YUhSMGN[A-Za-z0-9+/]{80,}={0,2}/); //YUhSMGN:2회인코딩된것.
+    decode(/[A-Za-z0-9+/]{30,}={1,2}/); //문자열 30회 + '=' 1~2회
+    decode(/[A-Za-z0-9+/]{200,}={0,2}/); //문자열 200회 + '=' 0~2회
 })();
